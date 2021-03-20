@@ -37,17 +37,30 @@ img {
   grid-template-areas: "nl e nr ";
 }
 
+.button-еarth {
+  display: grid;
+  grid-template-rows: 80%;
+  
+  position: relative;
+  grid-area: e;
+ 
+  align-items: center;
+}
+.control-panel-buttons {
+overflow: hidden;
+z-index: 1000;
+
+}
 .control-panel-earth {
   position: absolute;
   left: 0;
   top: 0;
+  right: 0;
+  margin-left: auto;
+    margin-right: auto;
+  align-items: center;
+  
 }
-.button-еarth {
-  display: grid;
-  position: relative;
-  grid-area: e;
-}
-
 .navi-left {
   display: grid;
   grid-template-rows: 5em;
@@ -89,35 +102,30 @@ img {
 
 .btn-left {
   background: rgba(53, 196, 232, 0.8);
-  border: 5px solid rgba(147, 146, 146, 0.8);
+  border: 0.4vw solid rgba(147, 146, 146, 0.8);
   border-radius: 21px;
   font-family: Roboto;
   font-weight: bold;
-  font-size: 36px;
+  font-size: 2.2vw;
 }
 
 .btn-start {
-  width: 325px;
-  height: 111px;
   background: rgba(196, 196, 196, 0.8);
-  border: 5px solid rgba(147, 146, 146, 0.8);
+  border: 0.4vw solid rgba(147, 146, 146, 0.8);
   border-radius: 27px;
   font-family: Roboto;
   font-weight: bold;
-  font-size: 72px;
+  font-size: 5vw;
   line-height: 84px;
-  margin-bottom: 25px;
 }
 
 .btn-group-game {
-  width: 325px;
-  height: 2em;
   background: rgba(196, 196, 196, 0.8);
-  border: 5px solid rgba(147, 146, 146, 0.8);
+  border: 0.4vw solid rgba(147, 146, 146, 0.8);
   border-radius: 17px;
   font-family: Roboto;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 2.2vw;
 }
 
 .buttons area:focus {
