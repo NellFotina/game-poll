@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Game Poll</title>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/register.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
@@ -134,7 +135,28 @@
             </div>
           </div>
           <div class="navi-left">
-            <button type="button" class="btn-left">Реєстрація</button>
+            <button type="button" class="btn-left" onclick="show('block')">Реєстрація</button>
+            <div id="gray" onclick="show('block')"></div>
+						<div id="register">
+							<img class="close" src="img/close.png" alt="" onclick="show('none')">
+							<div class="form">
+								<form class="myForm">
+									<input type="text" name="nikname" id="nikname" required>
+									<label for="nikname">Нікнейм</label>
+									<input type="text" name="full_name" id="full_name" required>
+									<label for="full_name">ПІБ</label>
+									<input type="text" name="company" id="company" required>
+									<label for="company">Назва організації</label>
+									<input type="text" name="position" id="position" required>
+									<label for="position">Посада</label>
+									<input type="email" name="email_address" id="email_address" required>
+									<label for="email_address">E-mail</label>
+									<input type="tel" name="phone_number" id="phone_number" required>
+									<label for="phone_number">Телефон</label>
+									<button class="btn_modal">Зареєструватися</button>
+								</form>
+							</div>
+						</div>
             <button type="button" class="btn-left">Увійти</button>
           </div>
           <div class="navi-right">
