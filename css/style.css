@@ -1,96 +1,116 @@
 /* fonts */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("fonts.css");
 
 /* global */
-/* * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-} */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* img,
+html {
+  font-size: calc(0.8em + 0.5vw + 0.5vh);
+}
+
+img,
 object,
 video,
-embed, */
-img {
-  max-width: 85%;
+embed {
+  max-width: 100%;
+}
+
+.content-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 /* main page*/
 .main {
-  background-image: url("../img/bg_1.jpg");
+  background-image: url("../img/bg/bg.jpg");
   background-size: cover;
-}
-.content-wrapper {
-  height: 100%;
+  height: 100vh;
   display: grid;
-  grid-template-rows: 1fr 3fr;
+  grid-template-rows: 7rem 1fr;
 }
+
+.new {
+  display: grid;
+  grid-template-areas:
+    "wel ear ."
+    "bl ear br";
+  width: 100%;
+}
+
 .header-logo-wrapper {
-  display: grid;
-  grid-template-columns: 1.5fr 2.5fr;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-logo-mt {
+  margin-top: 0.9rem;
+}
+
+.down-left {
+  grid-area: bl;
+  justify-self: flex-start;
+}
+
+.down-right {
+  grid-area: br;
+}
+
+.down-left,
+.down-right {
+  align-self: flex-end;
+  margin: 4rem 0 2rem;
 }
 
 .control-panel {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "nl e nr ";
-}
-
-.button-еarth {
-  display: grid;
-  grid-template-rows: 80%;
-  
-  position: relative;
-  grid-area: e;
- 
+  grid-area: ear;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
 }
-.control-panel-buttons {
-overflow: hidden;
-z-index: 1000;
 
+.control-panel-buttons {
+  z-index: 1040;
 }
+
 .control-panel-earth {
   position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  margin-left: auto;
-    margin-right: auto;
-  align-items: center;
-  
-}
-.navi-left {
-  display: grid;
-  grid-template-rows: 5em;
-  grid-template-columns: 70%;
-  grid-gap: 0.5vw;
-  grid-area: nl;
-  margin-bottom: 3em;
-  align-items: baseline;
-  align-content: end;
-  justify-content: space-around;
+  z-index: 1;
 }
 
-.navi-right {
-  display: grid;
-  grid-template-columns: 70%;
-  grid-gap: 1vw;
-  grid-area: nr;
-  margin-bottom: 3em;
-  align-items: baseline;
-  align-content: end;
-  justify-content: space-around;
+.welcome-main {
+  grid-area: wel;
+  position: absolute;
+  left: 0;
+  min-width: 16rem;
+  height: 2rem;
+  background: rgba(53, 196, 232, 0.45);
+  border-radius: 0 3.2vh 3.2vh 0;
+  font: italic 700 1.1rem/2rem Roboto;
+  text-align: center;
+  color: #ffffff;
+  border: none;
+  margin-top: 2.3rem;
 }
+
 /* animate buttons */
 @media (prefers-reduced-motion: no-preference) {
   .control-panel-buttons {
-    animation: control-panel-spin infinite 100s linear;
+    animation: buttons-spin infinite 200s linear;
   }
 }
 
-@keyframes control-panel-spin {
+@media (prefers-reduced-motion: no-preference) {
+  .animated {
+    animation: buttons-spin infinite 10s linear;
+  }
+}
+
+@keyframes buttons-spin {
   from {
     transform: rotate(0deg);
   }
@@ -100,53 +120,306 @@ z-index: 1000;
   }
 }
 
-.btn-left {
+/* end animate buttons */
+
+.navi-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 1rem;
+}
+
+.navi-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 1rem;
+}
+
+.btn-sign-up {
+  padding: 0.2585rem 2.106rem;
   background: rgba(53, 196, 232, 0.8);
-  border: 0.4vw solid rgba(147, 146, 146, 0.8);
-  border-radius: 21px;
+  border: 5px solid rgba(147, 146, 146, 0.8);
+  border-radius: 1rem;
   font-family: Roboto;
   font-weight: bold;
-  font-size: 2.2vw;
-  cursor: pointer;
+  font-size: 1.34975rem;
+}
+
+.btn-sign-in {
+  padding: 0.2585rem 4.27836rem;
+  background: rgba(53, 196, 232, 0.8);
+  border: 5px solid rgba(147, 146, 146, 0.8);
+  border-radius: 1rem;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 1.34975rem;
+  margin-top: 0.845rem;
 }
 
 .btn-start {
+  padding: 0.5166rem 2.3285rem;
   background: rgba(196, 196, 196, 0.8);
-  border: 0.4vw solid rgba(147, 146, 146, 0.8);
-  border-radius: 27px;
+  border: 5px solid rgba(147, 146, 146, 0.8);
+  border-radius: 1.0625rem;
   font-family: Roboto;
   font-weight: bold;
-  font-size: 5vw;
-  line-height: 84px;
-  cursor: pointer;
+  font-size: 2.861rem;
+  line-height: 3rem;
 }
 
 .btn-group-game {
+  padding: 0.125rem 1.08984214rem;
   background: rgba(196, 196, 196, 0.8);
-  border: 0.4vw solid rgba(147, 146, 146, 0.8);
-  border-radius: 17px;
+  border: 0.3125rem solid rgba(147, 146, 146, 0.8);
+  border-radius: 1.0615rem;
   font-family: Roboto;
   font-weight: bold;
-  font-size: 2.2vw;
-  cursor: pointer;
+  font-size: 1.19095rem;
+  margin-top: 0.845rem;
 }
 
 .buttons area:focus {
   outline: none;
 }
 
-/* pages */
-.page {
-  background-image: url("../img/bg_4.jpg");
-  background-size: cover;
-  height: 100vh;
+@media (max-width: 1366px) {
+  /* .header-logo1 a img,
+  .header-logo2 a img {
+    width: 80%;
+  } */
+  .control-panel {
+    margin-top: 0;
+  }
+
+  .control-panel-buttons {
+    max-width: 430px;
+  }
+
+  .control-panel-earth {
+    max-width: 280px;
+  }
+  .down-left,
+  .down-right {
+    margin: 4rem 0;
+  }
+  .navi-left {
+    margin-left: 2rem;
+  }
+
+  .navi-right {
+    margin-top: 1rem;
+    margin-right: 2rem;
+  }
+
+  .btn-group-game,
+  .btn-sign-in {
+    margin-top: 0.5rem;
+  }
+
+  .btn-sign-up {
+    width: 11.875rem;
+    padding: 0.125rem 0.5rem;
+    font-size: 1.25rem;
+  }
+
+  .btn-sign-in {
+    width: 11.875rem;
+    padding: 0.125rem 0.5rem;
+    font-size: 1.25rem;
+  }
+
+  .btn-start {
+    width: 11.875rem;
+    padding: 0 0.5rem;
+    font-size: 1.9rem;
+  }
+
+  .btn-group-game {
+    width: 11.875rem;
+    padding: 0.313rem 0.5rem;
+    font-size: 1rem;
+  }
 }
 
-.page-hover {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(190, 178, 145, 0.6);
+@media (max-width: 1024px) {
+
+  .header-logo1,
+  .header-logo2 {
+    margin: 0;
+  }
+
+  .new {
+    display: grid;
+    grid-template-rows: 0.3fr 1fr 0.3fr;
+    grid-template-areas:
+      "wel ."
+      "ear ear"
+      "bl br";
+  }
+
+  .control-panel {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    grid-template-rows: 6.0165rem 1fr;
+  }
+
+  .new {
+    display: grid;
+    grid-template-areas:
+      "wel"
+      "ear"
+      "br"
+      "bl";
+    justify-content: space-around;
+    align-content: space-around;
+  }
+
+  .control-panel {
+    margin-bottom: 0;
+  }
+
+  .welcome-main {
+    width: 15rem;
+    border-radius: 3.2vh 3.2vh;
+    display: block;
+    margin: 0 auto;
+    align-self: center;
+    position: relative;
+  }
+
+  .down-left,
+  .down-right {
+    align-self: center;
+  }
+
+  .btn-group-game {
+    display: none;
+  }
+
+  .down-left,
+  .down-right {
+    margin: 0 auto;
+  }
+
+  .down-left {
+    margin-bottom: 1rem;
+  }
+
+  .down-right {
+    margin-bottom: 0.3rem;
+  }
+
+  .button-wrapper {
+    bottom: 1rem;
+  }
+
+  .navi-left {
+    margin-left: 0;
+  }
+  .navi-right {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .new {
+    grid-template-rows: 0.1fr 0.7fr 0.2fr 0.2fr;
+  }
+
+  .control-panel {
+    max-width: 400px;
+  }
+
+  .control-panel-buttons {
+    width: 90%;
+  }
+
+  .control-panel-earth {
+    width: 58%;
+  }
+
+  .button-wrapper {
+    bottom: 2rem;
+  }
+
+  .navi-left,
+  .navi-right {
+    align-items: center;
+  }
+
+  .navi-right {
+    margin-top: 0.5rem;
+  }
+
+  .btn-group-game,
+  .btn-sign-in {
+    margin-top: 0.5rem;
+  }
+
+  .btn-sign-up,
+  .btn-sign-in {
+    width: 11.875rem;
+    padding: 0.125rem 0.5rem;
+    font-size: 1.25rem;
+  }
+
+  .btn-start {
+    width: 11.875rem;
+    padding: 0 0.5rem;
+    font-size: 1.9rem;
+  }
+
+  .btn-group-game {
+    width: 11.875rem;
+    padding: 0.313rem 0.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .main {
+    grid-template-rows: 4rem 1fr;
+  }
+
+  .control-panel-buttons {
+    width: 87%;
+  }
+
+  .button-wrapper {
+    bottom: 1rem;
+  }
+
+  .btn-group-game,
+  .btn-sign-in {
+    margin-top: 0.5rem;
+  }
+
+  .btn-sign-up {
+    width: 10.55rem;
+    padding: 0 0.5rem;
+    font-size: 1.25rem;
+  }
+
+  .btn-sign-in {
+    width: 10.55rem;
+    padding: 0 0.5rem;
+    font-size: 1.25rem;
+  }
+
+  .btn-start {
+    width: 10.55rem;
+    padding: 0 0.5rem;
+    font-size: 1.9rem;
+  }
+
+  .btn-group-game {
+    width: 10.55rem;
+    padding: 0.16rem 0.5rem;
+    font-size: 1rem;
+  }
 }

@@ -1,176 +1,155 @@
 <!DOCTYPE html>
 <html lang="uk">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Game Poll</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
-    <link href="css/register.css" rel="stylesheet" type="text/css" />
-  </head>
 
-  <body>
-    <div class="main">
-      <div class="content-wrapper">
-        <div class="header-logo-wrapper">
-          <div class="header-logo">
-            <a href="#"><img src="img/logo_gc.png" alt="" /></a>
-          </div>
-          <div class="header-logo">
-            <a href="#"><img src="img/logo_goals.png" alt="" /></a>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game Poll</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+  <!-- CSS style-->
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <link href="css/forms.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="main overflow-hidden">
+    <div class="header-logo-mt">
+      <div class="header-logo-wrapper content-wrapper">
+        <div class="header-logo1">
+          <a href="#"><img src="img/logo_gc.png" alt="" class="img-fluid" /></a>
         </div>
-        <div class="control-panel">
-          <div class="button-еarth">
-            <div class="control-panel-buttons">
-              <div>
-              <img src="img/buttons.svg" alt="" usemap="#buttonsmap" />
-              <map name="buttonsmap" class="buttons">
-                <area
-                  shape="poly"
-                  coords="235,103,203,15,241,4,291,1,290,94"
-                  alt=""
-                  href="pages/pages.html"
-                />
-                <area
-                  shape="poly"
-                  coords="308,95,310,2,352,6,398,21,362,107"
-                  alt=""
-                  href="pages/pages.html"
-                />
-                <area
-                  shape="poly"
-                  coords="378,114,414,28,455,49,489,77,425,145"
-                  alt=""
-                  href="pages/pages.html"
-                />
-                <area
-                  shape="poly"
-                  coords="436,157,502,90,531,124,553,163,469,203"
-                  alt=""
-                  href="pages/pages.html"
-                />
-                <area
-                  shape="poly"
-                  coords="476,220,562,180,577,224,582,268,490,274"
-                  alt=""
-                  href="pages/pages.html"
-                />
-                <area
-                  shape="poly"
-                  coords="491,292,584,288,582,328,571,377,483,348"
-                  alt=""
-                  href="pages/pages.html"
-                />
-                <area
-                  shape="poly"
-                  coords="477,362,567,391,551,429,524,470,450,412"
-                  alt=""
-                  href="pages/pages.html"
-                />
-                <area
-                  shape="poly"
-                  coords="439,425,512,484,481,518,443,541,397,462"
-                  alt=""
-                  href="pages/pages.html"
-                />
-                <area
-                  shape="poly"
-                  coords="380,470,426,550,386,569,341,578,327,487"
-                  alt=""
-                  href="pages/pages.html"
-                />
-                <area
-                  shape="poly"
-                  coords="309,489,322,581,275,583,233,576,254,486"
-                  alt=""
-                  href="pages/pages.html"
-                />
-                <area
-                  shape="poly"
-                  coords="238,482,217,573,172,558,135,537,187,459"
-                  alt=""
-                  href="pages/pages.html"
-                />
-                <area
-                  shape="poly"
-                  coords="174,450,121,528,87,499,59,465,135,411"
-                  alt=""
-                  href="pages/pages.html"
-                />
-                <area
-                  shape="poly"
-                  coords="126,397,48,452,28,413,13,370,104,347"
-                  alt=""
-                  href="pages/pages.html"
-                />
-                <area
-                  shape="poly"
-                  coords="100,331,8,355,1,309,3,266,96,276"
-                  alt=""
-                  href="pages/pages.html"
-                />
-                <area
-                  shape="poly"
-                  coords="98,261,5,251,13,206,31,166,114,208"
-                  alt=""
-                  href="pages/pages.html"
-                />
-                <area
-                  shape="poly"
-                  coords="122,193,39,150,62,113,95,80,157,149"
-                  alt=""
-                  href="pages/pages.html"
-                />
-                <area
-                  shape="poly"
-                  coords="170,138,108,68,144,41,184,22,218,110"
-                  alt=""
-                  href="pages/pages.html"
-                />
-              </map>
-            </div>
-            </div>
-            <div class="control-panel-earth">
-              <img src="img/еarth.png" alt="" />
-            </div>
-          </div>
-          <div class="navi-left">
-            <button type="button" class="btn-left" onclick="show('block')">Реєстрація</button>
-            <div id="gray" onclick="show('block')"></div>
-						<div id="register">
-							<img class="close" src="img/close.png" alt="" onclick="show('none')">
-							<div class="form">
-								<form class="myForm">
-									<input type="text" name="nikname" id="nikname" required>
-									<label for="nikname">Нікнейм</label>
-									<input type="text" name="full_name" id="full_name" required>
-									<label for="full_name">ПІБ</label>
-									<input type="text" name="company" id="company" required>
-									<label for="company">Назва організації</label>
-									<input type="text" name="position" id="position" required>
-									<label for="position">Посада</label>
-									<input type="email" name="email_address" id="email_address" required>
-									<label for="email_address">E-mail</label>
-									<input type="tel" name="phone_number" id="phone_number" required>
-									<label for="phone_number">Телефон</label>
-									<button class="btn_modal">Зареєструватися</button>
-								</form>
-							</div>
-						</div>
-            <button type="button" class="btn-left">Увійти</button>
-          </div>
-          <div class="navi-right">
-            <button type="button" class="btn-start">START</button>
-            <button type="button" class="btn-group-game">
-              Групове змагання
-            </button>
-          </div>
+        <div class="header-logo2">
+          <a href="#"><img src="img/logo_goals.png" alt="" class="img-fluid" /></a>
         </div>
-        <!-- end control-panel -->
       </div>
-      <!-- end content-wrapper -->
     </div>
-    <!-- end main -->
-    <script src="js/custom.js"></script>
-  </body>
+
+    <div class="new content-wrapper">
+      <span class="welcome-main">Вітаємо&nbsp;Fighter@gmail.com</span>
+      <div class="down-left">
+        <div class="navi-left">
+          <button type="button" class="btn btn-primary btn-sign-up" data-bs-toggle="modal"
+            data-bs-target="#modalSignUp">
+            Реєстрація
+          </button>
+          <button type="button" class="btn btn-primary btn-sign-in" data-bs-toggle="modal"
+            data-bs-target="#modalSignIn">
+            Вхід
+          </button>
+        </div>
+      </div>
+
+      <div class="control-panel">
+        <div class="control-panel-buttons" id="buttons-animate">
+          <img src="img/buttons.png" alt="" class="img-fluid" />
+        </div>
+        <div class="control-panel-earth">
+          <img src="img/еarth.png" alt="" class="img-fluid" />
+        </div>
+      </div>
+      <!-- end control-panel -->
+
+      <div class="down-right">
+        <div class="navi-right">
+          <button type="button" class="btn btn-secondary btn-start" onclick="onClickSpin()" id="click">
+            Старт
+          </button>
+          <button type="button" class="btn btn-secondary btn-group-game">
+            Групове змагання
+          </button>
+        </div>
+      </div>
+    </div><!-- end content-wrapper -->
+  </div> <!-- end main -->
+
+
+  <!-- Modal Sign Up -->
+  <div class="modal fade" id="modalSignUp" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body form-bg">
+          <button type="button" class="btn-close position-absolute top-0 end-0 m-2" data-bs-dismiss="modal"
+            aria-label="Close"></button>
+          <form>
+            <div class="mb-1">
+              <label for="recipient-name" class="col-form-label">Нікнейм:</label>
+              <input type="text" class="form-control" id="recipient-name" />
+            </div>
+            <!-- <div class="mb-1">
+              <label for="recipient-noun" class="col-form-label">ПІБ:</label>
+              <input type="text" class="form-control" id="recipient-noun" />
+            </div> -->
+            <!-- <div class="mb-1">
+							<label for="recipient-organization" class="col-form-label">Назва організації:</label>
+							<input type="text" class="form-control" id="recipient-organization">
+						</div>
+						<div class="mb-1">
+							<label for="recipient-position" class="col-form-label">Посада:</label>
+							<input type="text" class="form-control" id="recipient-position">
+						</div> -->
+            <div class="mb-1">
+              <label for="recipient-email" class="col-form-label">e-mail:</label>
+              <input type="email" class="form-control" id="recipient-email" />
+            </div>
+            <!-- <div class="mb-1">
+              <label for="recipient-phone" class="col-form-label">Телефон:</label>
+              <input type="text" class="form-control" id="recipient-phone" />
+            </div> -->
+            <div class="mb-1">
+              <label for="sign-up-password" class="col-form-label">Пароль:</label>
+              <input type="password" class="form-control" id="sign-up-password" />
+            </div>
+            <div class="mb-1">
+              <label for="sign-up-password1" class="col-form-label">Повторити пароль:</label>
+              <input type="password" class="form-control" id="sign-up-password1" />
+            </div>
+            <div class="d-flex justify-content-center">
+              <button type="button" class="btn btn-primary btn-form-reg">
+                Реєстрація
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Sign In -->
+  <div class="modal fade" id="modalSignIn" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body form-bg">
+          <button type="button" class="btn-close position-absolute top-0 end-0 m-2" data-bs-dismiss="modal"
+            aria-label="Close"></button>
+          <form>
+            <div class="mb-1">
+              <label for="recipient-name" class="col-form-label">Нікнейм:</label>
+              <input type="text" class="form-control" id="sign-in-name" />
+            </div>
+            <div class="mb-1">
+              <label for="sign-in-password" class="col-form-label">Пароль:</label>
+              <input type="password" class="form-control" id="sign-in-password" />
+            </div>
+            <div class="d-flex justify-content-center">
+              <button type="button" class="btn btn-primary btn-form-sign-in">
+                Вхід
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+  </script>
+  <script src="js/custom.js"></script>
+
+</body>
+
 </html>
