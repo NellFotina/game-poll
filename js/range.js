@@ -4,13 +4,13 @@ let nr,
 let ed = "";
 let p = document.getElementById("gen");
 let rng = document.getElementById("numRight");
-restart(nr);
+//restart(nr);
 
 function catchNum() { //выводит числовое значение ползунка в абзац
   p.innerHTML = rng.value;
 }
 
-function restart() {
+window.onload = function (nr) {
   nr = 20; //правильный ответ из базы данных
   nd = 18; //правильный нижний диапазон числа из базы данных
   nu = 22; //правильный верхний диапазон числа из базы данных
