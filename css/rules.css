@@ -1,14 +1,14 @@
 .rules {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 16% 1fr 16%;
+  grid-template-columns: 3% 1fr 30% 1fr 3%;
+  grid-template-rows: 20% 1fr 20%;
   grid-template-areas:
-    "wel title nav"
-    "info info info"
-    "best best go";
+    "wel wel title nav ."
+    ". info info info ."
+    "best best best go .";
   width: 100%;
   align-items: center;
-  max-width: 1440px;
+  justify-items: center;
   margin: 0 auto;
 }
 .scroll {
@@ -18,7 +18,7 @@
   overflow: auto;
   padding: 1rem 1.5rem 2rem 1rem;
   margin-top: 1rem;
-  font: normal 400 1rem Roboto;
+  font: normal 400 0.8rem Roboto;
   z-index: 1;
 }
 .info-window {
@@ -27,11 +27,9 @@
   grid-template-columns: repeat(auto-fit, minmax(9rem, 90%));
   justify-content: space-around;
   align-self: stretch;
+  justify-self: stretch;
 }
 
-.rules-dropdown {
-  padding: 0.12em;
-}
 .bottom {
 bottom: 1rem;
 }
@@ -45,10 +43,9 @@ bottom: 1rem;
 .best {
   grid-area: best;
   max-width: 25rem;
-  padding: 0 2rem;
-  position: absolute;
   font-weight: 500;
   font-size: 1rem;
+  background: none;
 }
 .best a {
   color: #ffffff;
@@ -70,32 +67,9 @@ bottom: 1rem;
   font: normal 400 1rem/1rem Roboto;
 }
 
-.btn-bottom-bl {
-  min-width: 25vw;
-}
-@media (max-width: 1366px) {
-  .top {
-  margin-top: 1rem;
-}
-.rules {
-  max-width: 1100px;
-}
-}
 @media (max-width: 1024px) {
-  .rules {
-        grid-template-areas:
-      "wel title go"
-      "info info info"
-      "best best nav";
-      }
-      .wrapper-dropdown-2 .dropdown {
-        top: -322px;
-        border-bottom: none;
-        border-top: 5px solid rgba(147, 146, 146, 0.8);
-        border-radius: 1rem 1rem 0 0;
-        z-index: 2000;
-    }
-    .scroll {
+  
+  .scroll {
       padding: 0 1.5rem 0 1rem;
     }
   }
@@ -108,11 +82,10 @@ bottom: 1rem;
       "wel nav"
       "title go"
       "info info"
-      "best .";
+      "best best";
     margin: 0 auto;
   } 
   .welcome-main {
-     position: static;
     margin-top: 0;
     max-width: 25rem;
 }
@@ -127,8 +100,13 @@ bottom: 1rem;
 @media (max-width: 768px) {
 .dropdown-navbar {
   grid-area: nav;
-  
-}
+  }
+  .wrapper-dropdown-2 .dropdown li a {
+  border-bottom: none;
+  border-top: 1px solid #000000;
+  padding-top: 0.3rem;
+
+  }
 }
 @media (max-width: 540px) {
 .btn-bottom-bl {
@@ -144,7 +122,7 @@ bottom: 1rem;
     "nav nav"
     "title go"
     "info info"
-    "best .";
+    "best best";
   margin: 0 auto;
 } 
 }
@@ -160,7 +138,7 @@ bottom: 1rem;
       "nav nav"
       "title go"
       "info info"
-      "best .";
+      "best best";
     margin: 0 auto;
   } 
   .infospan {
