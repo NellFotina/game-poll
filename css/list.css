@@ -93,7 +93,7 @@ button.list-item1 {
 }
 
 @media (max-width: 992px) {
-#buttons3 {
+#list {
     display: grid;
     grid-template-areas:
         "i2 i3"
@@ -103,7 +103,7 @@ button.list-item1 {
   grid-area: lb;
   grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
 }
-.three-buttons div.list-block {
+.three-buttons .list-block {
   margin: 0 auto;
 }
 

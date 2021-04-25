@@ -13,9 +13,11 @@
     />
     <!-- CSS style-->
     <link href="../css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../css/result.css" rel="stylesheet" type="text/css" />
+
     <link href="../css/forms.css" rel="stylesheet" type="text/css" />
     <link href="../css/rules.css" rel="stylesheet" type="text/css" />
-    <link href="../css/result.css" rel="stylesheet" type="text/css" />
+    <link href="../css/rating.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
@@ -35,12 +37,12 @@
         </div>
       </div>
 
-      <div class="rules">
-        <span class="welcome-main welcome-rules infospan top"
+      <div class="rules rating">
+        <span class="welcome-main welcome-rules infospan"
           >Вітаємо&nbsp;Fighter@gmail.com</span
         >
         <div class="field-block title">
-          <span id="rules" class="btn-bottom-bl">Ваш результат</span>
+          <span id="rules" class="btn-bottom-bl">Рейтинг</span>
         </div>
 
         <!-- Navbar -->
@@ -57,19 +59,41 @@
       </div>
       <!-- end Navbar -->
 
-        <div class="info-window info-result">
-          <div class="content-rules-description">
-            <div class="scroll scroll-result">
-              <h2>Вітаємо</h2>
-              <p class="scores-result"><b>Fighter@gmail.com, <br />ви набрали 60 балів.</b></p>
-              <p class="text-result">Тепер ви на крок ближче до досягнення Цілей сталого розвитку ООН</p>
-            </div>
+      <div class="display-result-block">
+        <button id="result" class="btn-bottom-res">Відображати мої результати у загальному рейтингу</button>
+      </div>
+    
+      <div class="rating-window">
+        <div class="content-rules-description content-rating">
+          <h4 class="rating-window-title">Рейтинг гравців:</h4>
+          <div class="rating-scroll">
+            <ol class="rating-window-list">
+              <li>............</li>
+              <li>............</li>
+              <li>............</li>
+              <li>............</li>
+              <li><span>Fighter@gmail.com 85 балів</span></li>
+              <li>............</li>
+              <li>............</li>
+              <li>............</li>
+              <li>............</li>
+              <li>............</li>
+              <li>............</li>
+              <li>............</li>
+              <li>............</li>
+              <li>............</li>
+              <li>............</li>
+              <li>............</li>
+              <li>............</li>
+              <li>............</li>
+              <li>............</li>
+              <li>............</li>
+            </ol>
           </div>
         </div>
-        <span class="best infospan bottom"
-          ><a href="#">Web-розробник сайту: команда BestApp</a></span
-        >
-
+      </div>
+      <span class="best rating-best infospan bottom">
+        <a href="#">Web-розробник сайту: команда BestApp</a></span>       
         <div class="field-block go">
           <button id="go" class="btn-bottom-bl">Почати гру</button>
         </div>
@@ -77,7 +101,11 @@
       <!-- end content-wrapper -->
     </div>
     <!-- end main -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+    <script
+      type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"
+    ></script>
     <script src="../js/dropdown.js"></script>
   </body>
 </html>

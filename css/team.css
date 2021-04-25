@@ -1,0 +1,105 @@
+.team {
+  grid-template-areas:
+    "wel wel title nav ."
+    "info info info info info"
+    "best best best go .";
+}
+
+.team-wrapper {
+  grid-template-columns: repeat(auto-fit, minmax(7rem, 100vw));
+  background-color: #fff;
+}
+.content-team {
+    border: none;
+    margin: 0;
+    width: 100%;
+background-color: #fff;
+border-radius: 0;
+text-align: start;
+}
+.team-window {
+  display: grid;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.persona {
+  display: grid;
+  grid-template-columns: 17% 83%;
+  /* padding: 2%; */
+}
+.team-block {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14.5rem, 1fr));
+  align-content: space-evenly;
+  gap: 0.5rem;
+}
+.persona-img {
+  display: grid;
+  align-self: center;
+}
+.persona-text {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: center;
+  padding-left: 3%;
+  gap: 0.2rem;
+}
+.persona-img > img {
+    align-self: center;
+    object-fit: cover;
+}
+.persona-text h1 {
+  font-size: 1rem;
+}
+.persona-text p {
+  font-size: 0.5rem;
+}
+.persona-text h1,
+.persona-text p {
+  margin-bottom: 0;
+  align-self: center;
+}
+
+    
+@media (max-width: 1024px) {
+    .team {
+      grid-template-areas:
+      "wel nav"
+      "title title"
+      "info info"
+      "best go";
+}
+}
+
+@media (max-width: 890px) {
+  .team {
+  grid-template-areas:
+    "wel go"
+    "title title"
+    "info info"
+    "best nav";
+  }
+}
+@media (max-width: 540px) {
+    .team {
+      grid-template-areas:
+      "wel wel"      
+      "title title"
+      "info info"
+      "go nav"
+      "best best";
+  }
+}
+@media (max-width: 520px) {
+  .team {
+    grid-template-areas:
+      "wel "      
+      "title"
+      "info "      
+      "go"
+      "nav "
+      "best ";
+  }
+}

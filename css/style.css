@@ -44,6 +44,7 @@ embed {
     ". bl ear br .";
   align-items: center;
   justify-items: center;
+  position: relative;
 }
 
 .header-logo-wrapper {
@@ -75,13 +76,16 @@ embed {
 }
 
 .control-panel {
-  position: relative;
+  position: absolute;
   grid-area: ear;
-  display: flex;
+  display: grid;
   align-items: center;
   justify-content: center;
   margin-bottom: 3rem;
   justify-self: center;
+  max-height: 100%;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
 }
 
 .control-panel-buttons {
@@ -138,53 +142,49 @@ embed {
 
 /* end animate buttons */
 
-.navi-left {
+.navi-left,
+.navi-right,
+.navi-right form,
+.navi-left form {
   display: flex;
   flex-direction: column;
 }
 
-.navi-right {
-  display: flex;
-  flex-direction: column;
-}
+.navi-left a,
+.navi-right a,
 .navi-left button,
-.navi-right button {
-  margin-top: 1rem;
+.navi-right button,
+.navi-right form input,
+.navi-left form input {
+  margin: 1rem auto 0;
+  width: 100%;
 }
 .btn-sign-up,
 .btn-sign-in {
   background: rgba(53, 196, 232, 0.8);
-  border: 5px solid rgba(147, 146, 146, 0.8);
-  border-radius: 1rem;
-  font: bold 1.35rem/1.7rem Roboto;
-}
-.btn-sign-up {
-  padding: 0.26rem 2.11rem;
-}
-
-.btn-sign-in {
-  padding: 0.26rem 4.28rem;
-}
-
-.btn-start {
-  padding: 0.52rem 2.33rem;
-  font: bold 2.86rem/3rem Roboto;
 }
 .btn-start,
 .btn-group-game {
   background: rgba(196, 196, 196, 0.8);
-  border: 0.31rem solid rgba(147, 146, 146, 0.8);
-  border-radius: 1.0625rem;
 }
+.btn-sign-up,
+.btn-sign-in,
+.btn-start,
 .btn-group-game {
-  padding: 0.125rem 1.1rem;
-  font: bold 1.19rem Roboto;
+  padding: 0.26rem 0;
+  font: bold 1.35rem/1.7rem Roboto;
+  border: 5px solid rgba(147, 146, 146, 0.8);
+  border-radius: 1rem;
 }
+
 .btn-sign-up:hover,
-.btn-sign-in:hover {
+.btn-sign-in:hover,
+#go:hover,
+.btn-form-ac:hover {
   background: #68d9f4;
-  border: 5px solid #cbcaca;
+  border: 4px solid #cbcaca;
 }
+
 .buttons area:focus,
 .btn-main-dropdown {
   outline: none;
@@ -205,11 +205,10 @@ embed {
   position: relative;
   display: flex;
   justify-content: center;
-  width: 90%;
   cursor: pointer;
 }
 .wrapper-dropdown-2 button {
-  padding: 0.24em 0 0.5rem;
+  padding: 0.2em 0 0.24rem;
   background: rgba(53, 196, 232, 1);
   border: 5px solid rgba(147, 146, 146, 0.8);
   color: #fff;
@@ -224,10 +223,10 @@ embed {
 }
 
 .wrapper-dropdown-2,
-.field-block span,
-.navi-left,
-.navi-right {
-  max-width: 359px;
+.field-block .btn-bottom-bl,
+.down-left,
+.down-right {
+  width: 17rem;
 }
 .btn-main-dropdown {
   position: relative;
@@ -240,7 +239,7 @@ embed {
   width: 0;
   height: 0;
   position: absolute;
-  right: 10%;
+  right: 12%;
   top: 50%;
   margin-top: -0.3em;
   border-width: 0.5em 0.5em 0 0.5em;
@@ -252,8 +251,7 @@ embed {
 }
 .wrapper-dropdown-2.active button.btn-main-dropdown {
   border-radius: 1rem 1rem 0 0;
-  border-bottom-color:  rgba(53, 196, 232, 1);
-  
+  border-bottom-color: rgba(53, 196, 232, 1);
 }
 .wrapper-dropdown-2 .dropdown {
   position: absolute;
@@ -277,6 +275,7 @@ embed {
 
   opacity: 0;
   pointer-events: none;
+  text-align: center;
 }
 .wrapper-dropdown-2 .dropdown li {
   padding: 0 1.7rem;
@@ -315,7 +314,6 @@ embed {
 .wrapper-dropdown-2.active .dropdown {
   opacity: 1;
   pointer-events: auto;
-  text-align: center;
 }
 
 .wrapper-dropdown-2.active .btn-main-border::before {
@@ -344,8 +342,8 @@ embed {
   }
   .new {
     display: grid;
-    grid-template-rows: 15% 1fr;
-    grid-template-columns: 3% 1fr 30% 1fr 3%;
+    grid-template-rows: 15% 85%;
+    grid-template-columns: 3% 32% 30% 32% 3%;
     grid-template-areas:
       "wel wel ear nav ."
       ". bl ear br .";
@@ -356,37 +354,41 @@ embed {
   .control-panel {
     margin-top: 0;
   }
-
+   
   .wrapper-dropdown-2 button,
-  .wrapper-dropdown-2 .dropdown {
-    width: 75%;
+  .wrapper-dropdown-2 .dropdown,
+  .navi-left .btn-sign-up,
+  .navi-left .btn-sign-in,
+  .navi-right .btn-start,
+  .navi-right .btn-group-game,
+  .field-block .btn-bottom-bl,
+  .wrapper-dropdown-2, 
+  .down-left, 
+  .down-right {
+    width: 14rem;
   }
 
-  .btn-sign-up,
-  .btn-sign-in {
-    width: 11.88rem;
-    padding: 0.125rem 0.5rem;
-    font-size: 1.25rem;
-  }
-
-  .btn-start {
-    width: 11.88rem;
-    padding: 0 0.5rem;
-    font-size: 1.9rem;
-  }
-
-  .btn-group-game {
-    width: 11.88rem;
-    padding: 0.313rem 0.5rem;
-    font-size: 1rem;
+  .navi-left .btn-sign-up,
+  .navi-left .btn-sign-in,
+  .navi-right .btn-start,
+  .navi-right .btn-group-game {
+    padding: 0.125rem 0;
   }
 }
-
+@media (max-width: 1200px) {
+  
+  .btn-sign-up,
+.btn-sign-in,
+.btn-start,
+.btn-group-game {
+  font-size: 1.1rem;
+}
+}
 @media (max-width: 1024px) {
   .new {
     display: grid;
-    grid-template-rows: 20% 1fr 30%;
-    grid-template-columns: 1fr 30% 1fr;
+    grid-template-rows: 20% 50% 30%;
+    grid-template-columns: 35% 30% 35%;
     grid-template-areas:
       "wel wel nav"
       "ear ear ear"
@@ -394,7 +396,7 @@ embed {
   }
 
   .header-wrapper img {
-    width: 100%;
+    width: 80%;
   }
   .header-logo1,
   .header-logo2 {
@@ -403,31 +405,52 @@ embed {
   .control-panel {
     margin-bottom: 0;
   }
-  .wrapper-dropdown-2 {
-    width: 100%;
+  .navi-left .btn-sign-up,
+  .navi-left .btn-sign-in,
+  .navi-right .btn-start,
+  .navi-right .btn-group-game,
+  .wrapper-dropdown-2 button,
+  .wrapper-dropdown-2 .dropdown,
+  .field-block .btn-bottom-bl {
+    width: 12rem;
   }
 }
 
-@media (max-width: 768px) {
-  .main {
-    grid-template-rows: 5rem 1fr;
-  }
-
+@media (max-width: 890px) {
   .new {
-    display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.1fr 0.7fr 0.2fr 0.2fr;
-    gap: 0.5rem;
+    grid-template-rows: 12% 46% 12% 10% 10% 10%;
     grid-template-areas:
       "wel"
       "ear"
       "br"
-      "nav";
+      "nav"
+      "bl"
+      ".";
     justify-content: center;
   }
+
+  .navi-left a,
+  .navi-right a,
+  .navi-left button,
+  .navi-right button,
+  .navi-left form,
+  .navi-right form {
+    margin: 0 auto;
+  }
+  .main {
+    grid-template-rows: 5rem 1fr;
+  }
+  .wrapper-dropdown-2,
+  .field-block span,
+  .down-left,
+  .down-right {
+    width: 100%;
+  }
+
   .wrapper-dropdown-2.active button.btn-main-dropdown {
     border-radius: 0 0 1rem 1rem;
-    border-top-color:  rgba(53, 196, 232, 1);
+    border-top-color: rgba(53, 196, 232, 1);
     border-bottom: 5px solid rgba(147, 146, 146, 0.8);
   }
   .wrapper-dropdown-2.active .btn-main-border::after {
@@ -438,6 +461,7 @@ embed {
   }
   .control-panel {
     margin-bottom: 0;
+    /* width: 100%; */
   }
 
   .welcome-main {
@@ -466,8 +490,16 @@ embed {
     bottom: 1rem;
   }
 
-  .wrapper-dropdown-2 {
+  .navi-left .btn-sign-up,
+  .navi-left .btn-sign-in,
+  .navi-right .btn-start,
+  .navi-right .btn-group-game,
+  .wrapper-dropdown-2,
+  .field-block .btn-bottom-bl {
     width: 11.88rem;
+  }
+  .wrapper-dropdown-2 
+  .dropdown-index {
     bottom: 0.5rem;
   }
 
@@ -508,15 +540,18 @@ embed {
     right: 1em;
   }
 }
+@media (max-width: 768px) {
+  .control-panel {
+    width: 14rem;
+  }
+}
 
 @media (max-width: 576px) {
   .down-left,
   .down-right {
-    margin: 0.5rem;
+    margin: 0;
   }
-  .control-panel {
-    width: 310px;
-  }
+
   .infospan {
     width: 100%;
     justify-self: center;
@@ -529,51 +564,44 @@ embed {
   .wrapper-dropdown-2 .dropdown li a {
     font-size: 0.9rem;
   }
-  
+
   .wrapper-dropdown-2 {
     bottom: 0;
   }
 }
 
+@media (max-width: 540px) {
+  .header-wrapper img {
+    width: 90%;
+  }
+}
+
+@media (max-width: 414px) {
+  .header-wrapper img {
+    width: 100%;
+  }
+}
 @media (max-width: 375px) {
   .main {
     grid-template-rows: 4rem 1fr;
-  }
-  .control-panel {
-    width: 270px;
   }
   .button-wrapper {
     bottom: 1rem;
   }
 
-  .btn-sign-up,
-  .btn-sign-in,
-  .btn-start,
-  .wrapper-dropdown-2 {
-    width: 10.55rem;
-    bottom: 0.3rem;
-  }
-
-  .btn-start {
-    font-size: 1.9rem;
-  }
-
-  .btn-group-game {
-    width: 10.55rem;
-    padding: 0.16rem 0.5rem;
-    font-size: 1rem;
-  }
-  
   .wrapper-dropdown-2 .dropdown li {
     margin-top: 0.3rem;
   }
 }
-
+@media (max-width: 320px) {
+  .control-panel {
+    width: 12rem;
+  }
+}
 @media (max-width: 280px) {
   .welcome-main {
     width: 13rem;
     min-width: 10rem;
     font: italic 700 0.9rem/2rem Roboto;
   }
-  
 }
