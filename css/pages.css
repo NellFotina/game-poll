@@ -22,31 +22,37 @@
 
 .pause {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 35% 35% 30%;
   align-items: center;
 }
 
 .welcome {
   display: block;
+  padding: 0 5%;
   margin-right: auto;
   min-width: 16rem;
   height: 2rem;
   background: rgba(53, 196, 232, 0.45);
   border-radius: 0 3.2vh 3.2vh 0;
-  font: italic 700 1.1rem/2rem Roboto;
+  font: italic 700 0.9rem/2rem Roboto;
   text-align: center;
   color: #ffffff;
   border: none;
 }
-.tablo {
+.tablo,
+.btn-control {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(7.5rem, 8.5rem));
-  gap: 0.6rem;
-}
-.btn-pause {
-  max-height: 3.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
 }
 .btn-pause,
+.btn-quit,
+.tablo2 {
+  max-height: 3.2rem;
+  width: 7rem;
+  justify-self: center;
+}
+.btn-pause,
+.btn-quit,
 .tablo1,
 .tablo2 {
   cursor: pointer;
@@ -59,13 +65,12 @@
   padding: 0.5rem 1rem;
 }
 
-.btn-pause {
-  max-width: 17rem;
-  justify-self: center;
+.tablo1 {
+  max-width: 10.5rem;
 }
+
 .tablo1,
 .tablo2 {
-  width: 7.5rem;
   justify-self: center;
   cursor: default;
 }
@@ -160,7 +165,7 @@
 .navi-buttons button,
 .three-buttons button,
 .navi-buttons form input,
-.three-buttons form input  {
+.three-buttons form input {
   width: 100%;
   height: 3.5rem;
   border: 0.76vh solid #939292;
@@ -172,10 +177,6 @@
   font: normal 500 0.75rem/1rem Roboto;
 }
 
-.btn-pause:hover {
-  border-color: #7f8c8d;
-  background: rgba(53, 196, 232, 0.6);
-}
 .navi-buttons button:hover,
 .three-buttons button:hover,
 .navi-buttons form input:hover,
@@ -185,6 +186,7 @@
 }
 
 .btn-pause:focus,
+.btn-quit:focus,
 .navi-buttons button:focus,
 .three-buttons button:focus,
 .navi-buttons form input:focus,
@@ -192,6 +194,13 @@
   outline: none;
 }
 
+.fas:active,
+.fas:focus,
+.fas:hover {
+  transform: rotate(360deg);
+  opacity: 0.6;
+  transition: all 0.5s ease-out;
+}
 /* pages bg, color */
 .page1-bg {
   background-image: url("../img/bg/bg_1.jpg");
@@ -415,12 +424,25 @@
 @media (max-width: 1024px) {
   .pause {
     display: grid;
-    grid-template-columns: 1fr 0.5fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .btn-control {
+    grid-template-areas:
+      "bq"
+      "bp";
+  }
+  .btn-quit {
+    grid-area: bq;
   }
   .btn-pause {
+    grid-area: bp;
+  }
+  .btn-pause,
+  .btn-quit {
     max-height: 3.2rem;
   }
-  .tablo {
+  .tablo,
+  .btn-control {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(7.7rem, 1fr));
     gap: 0.6rem;
@@ -436,7 +458,7 @@
 @media (max-width: 992px) {
   .three-buttons form {
     text-align: center;
-}
+  }
   #buttons3 {
     display: grid;
     grid-template-areas:
@@ -456,7 +478,9 @@
     padding: 0 0 0.7rem 0;
   }
   .skip-answer {
-    max-width: 60%;
+    width: 60%;
+    justify-self: center;
+	
   }
   .pause {
     display: grid;
@@ -470,12 +494,22 @@
   .questions-block {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 25rem));
   }
+  .tablo,
+  .btn-control {
+    grid-template-columns: 55% 45%;
+    gap: 0;
+  }
 }
 
 @media (max-width: 768px) {
   .pause {
     display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .tablo,
+  .btn-control {
     grid-template-columns: 1fr;
+    gap: 0.5rem;
   }
   .questions-text {
     padding: 0.5rem 0.5rem;
@@ -533,13 +567,14 @@
 }
 
 @media (max-width: 320px) {
-  .tablo {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 0.2rem;
-  }
   .btn-pause,
+  .btn-quit,
+  .tablo2 {
+    width: 6rem;
+  }
+  .tablo1 {
+    max-width: 10rem;
+  }
   .tablo1,
   .tablo2 {
     padding: 0.4rem 1rem;
@@ -561,10 +596,16 @@
   .content {
     grid-template-rows: 30% calc(50vh - 5.7rem) 1fr;
   }
+  .pause {
+    grid-template-columns: 1fr;
+  }
   .tablo {
-    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
+  }
+  .btn-control {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "bp bq";
   }
   .navi-buttons,
   .three-buttons,

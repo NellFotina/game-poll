@@ -80,7 +80,8 @@
 .go {
   grid-area: go;
 }
-.btn-bottom-bl {
+.btn-bottom-bl,
+.btn-bottom-res {
   cursor: pointer;
   font: normal 600 1.1rem/1.6rem Roboto;
   color: #ffffff;
@@ -97,12 +98,14 @@
   font-size: 0.8rem;
   background: none;
 }
-.best a {
+.best a,
+.btn-form-ac:hover {
   color: #ffffff;
   text-decoration: none;
 }
 .best a:hover {
   color: #000;
+  text-decoration: none;
 }
 .title {
   grid-area: title;
@@ -113,7 +116,8 @@
   justify-items: center;
 }
 #rules,
-#go {
+#go,
+.btn-bottom-res {
   padding: 0.2rem;
 }
 .btn-best {
@@ -160,7 +164,7 @@
   .wrapper-dropdown-2.dropup-rules .dropdown {
     top: 72%;
     border-top: none;
-    border-bottom: 5px solid rgba(147, 146, 146, 0.8);
+    border-bottom: 4px solid rgba(147, 146, 146, 0.8);
     border-radius: 0 0 1rem 1rem;
   }
 }
@@ -174,7 +178,7 @@
   }
   .wrapper-dropdown-2.dropup-rules.active button.btn-main-dropdown {
     border-radius: 1rem 1rem 0.35rem 0.35rem;
-    border-top: 5px solid rgba(147, 146, 146, 0.8);
+    border-top: 4px solid rgba(147, 146, 146, 0.8);
     border-bottom-color: rgba(53, 196, 232, 1);
   }
   .wrapper-dropdown-2.dropup-rules .dropdown {
@@ -188,7 +192,7 @@
 @media (max-width: 540px) {
     .rules {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 10% 10% 60% 10% 10%;
+    grid-template-rows: 10% 10% 60% 13% 7%;
     grid-template-areas:
       "wel wel"      
       "title title"
@@ -197,6 +201,9 @@
       "best best";
     margin: 0 auto;
   }  
+  .rules-header1 {
+    font-size: 1.2rem;
+}
 }
 @media (max-width: 520px) {
   .rules {

@@ -62,7 +62,14 @@ text-align: start;
   align-self: center;
 }
 
-    
+.partners-block {
+grid-template-columns: repeat(3, 1fr);
+}    
+.partners-img {
+  justify-self: center;
+  align-self: center;
+width: 60%;
+}
 @media (max-width: 1024px) {
     .team {
       grid-template-areas:
@@ -102,4 +109,11 @@ text-align: start;
       "nav "
       "best ";
   }
+  .partners-block {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    }    
+    .partners-img {
+    width: 30%;
+    }
 }

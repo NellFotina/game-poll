@@ -52,15 +52,8 @@
 }
 
 .btn-bottom-res {
-  cursor: pointer;
   font: normal 400 0.7rem/1rem Roboto;
   min-width: 15vw;
-  max-width: 14rem;
-  color: #ffffff;
-  background: rgba(53, 196, 232, 0.8);
-  border: 0.6vh solid rgba(147, 146, 146, 0.8);
-  border-radius: 3vh;
-  text-align: center;
 }
 
 
@@ -117,6 +110,9 @@
   .content-rating {
     width: 70%;
   }
+  .btn-bottom-res {
+    width: 100%;
+}
 }
 @media (max-width: 520px) {
   .rating {
@@ -145,9 +141,6 @@
 @media (max-width: 280px) {
   .btn-bottom-res {
     font: normal 400 0.65rem/1rem Roboto;
-    min-width: 15vw;
-    max-width: 11rem;
-    margin-bottom: 1rem;
   }
 
   .rating-window-list {
