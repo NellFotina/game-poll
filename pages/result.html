@@ -15,7 +15,7 @@
     <link href="../css/style.css" rel="stylesheet" type="text/css" />
     <link href="../css/forms.css" rel="stylesheet" type="text/css" />
     <link href="../css/rules.css" rel="stylesheet" type="text/css" />
-    <link href="../css/result.css" rel="stylesheet" type="text/css" />
+    <link href="../css/rating.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
@@ -35,7 +35,7 @@
         </div>
       </div>
 
-      <div class="rules">
+      <div class="rules result">
         <span class="welcome-main welcome-rules infospan top"
           >Вітаємо&nbsp;Fighter@gmail.com</span
         >
@@ -58,7 +58,7 @@
       <!-- end Navbar -->
 
         <div class="info-window info-result">
-          <div class="content-rules-description">
+          <div class="content-rules-description content-rating">
             <div class="scroll scroll-result">
               <h2>Вітаємо,</h2>
               <p class="scores-result"><b>Fighter@gmail.com, <br />ви набрали 60 балів.</b></p>
@@ -66,9 +66,10 @@
             </div>
           </div>
         </div>
-        <span class="best infospan bottom"
-          ><a href="bestapp.html">Web-розробник сайту: команда BestApp</a></span
-        >
+
+        <div class="display-result-block">
+          <button id="result" class="btn-bottom-res">Відображати мої результати у загальному рейтингу</button>
+        </div>
 
         <div class="field-block go">
           <button id="go" class="btn-bottom-bl">Почати гру</button>

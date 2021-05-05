@@ -12,6 +12,14 @@
   justify-items: center;
   margin: 0 auto;
 }
+
+.result {
+grid-template-areas:
+"wel wel title nav ."
+". info info info ."
+". res . go .";
+}
+
 .scroll {
   height: 90%;
   width: 95%;
@@ -143,6 +151,17 @@
       "info info"
       "best go";
   }
+  .result {
+    grid-template-areas:
+    "wel nav"
+    "title title"
+    "info info"
+    "res go";
+    }
+    .info-result {
+      grid-template-columns: repeat(auto-fit, minmax(7rem, 100%));
+      justify-self: stretch;
+    }
   .scroll {
     padding: 0 1.5rem 0 1rem;
   }
@@ -157,6 +176,13 @@
       "best nav";
     margin: 0 auto;
   }
+  .result {
+    grid-template-areas:
+    "wel go"
+    "title title"
+    "info info"
+    "res nav";
+    }
   .welcome-main.welcome-rules {
     margin-top: 0;
     max-width: 25rem;
@@ -200,7 +226,15 @@
       "go nav"
       "best best";
     margin: 0 auto;
-  }  
+  }
+  .result {
+    grid-template-areas:
+    "wel wel"      
+    "title title"
+    "info info"
+    "go nav"
+    "res res";
+    }
   .rules-header1 {
     font-size: 1.2rem;
 }
@@ -214,10 +248,20 @@
       "title"
       "info "      
       "go"
-      "nav "
-      "best ";
+      "nav"
+      "best";
     margin: 0 auto;
   }
+  .result {
+    grid-template-rows: 7% 10% 53% 10% 10% 10%;
+    grid-template-areas:
+    "wel "      
+    "title"
+    "info"      
+    "res"
+    "go"
+    "nav";
+    }
   }
 @media (max-width: 414px) {
   .btn-bottom-bl {
