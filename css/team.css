@@ -13,7 +13,7 @@
   border: none;
   margin: 0;
   width: 100%;
-  background-color: #F1F0F0;
+  background-color: #fff;
   border-radius: 0;
   text-align: start;
 }
@@ -70,13 +70,18 @@
   align-self: center;
   width: 60%;
 }
+.partners-img:first-child,
+ .partners-img:last-child { 
+align-self: flex-end;
+ }
 .partners-img img {
-  -webkit-box-shadow: -18px 17px 17px 12px rgba(34, 60, 80, 0.2);
-  -moz-box-shadow: -18px 17px 17px 12px rgba(34, 60, 80, 0.2);
-  box-shadow: -18px 17px 17px 12px rgba(34, 60, 80, 0.2);
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+-moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 }
 .partners-img p {
   font-style: normal;
+  text-align: center;
 }
 
 @media (max-width: 1024px) {
@@ -97,6 +102,9 @@
       "info info"
       "best nav";
   }
+  .partners-img p {
+    font-size: 0.7rem;
+}
 }
 @media (max-width: 540px) {
   .team {
@@ -120,9 +128,13 @@
   }
   .partners-block {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 1fr 0.5fr 0.7fr;
   }
   .partners-img {
     width: 30%;
   }
+  .partners-img:first-child,
+ .partners-img:last-child { 
+align-self: center;
+ }
 }
