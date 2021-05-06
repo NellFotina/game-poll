@@ -90,7 +90,14 @@ embed {
   max-width: 100%;
   aspect-ratio: 1 / 1;
 }
-
+@supports (aspect-ratio: 1 / 1) {
+  /* если браузер поддерживает свойство, то */
+  /* применить стили внутри */
+  .control-panel {
+    max-height: 100%;
+    aspect-ratio: 1 / 1;
+  }
+    }
 .control-panel-buttons {
   z-index: 1040;
 }
@@ -112,7 +119,7 @@ embed {
   min-width: 15rem;
   height: 2rem;
   border-radius: 0 3vh 3vh 0;
-  font: italic 700 1.1rem/2rem Roboto;
+  font: italic 700 1rem/2rem Roboto;
   text-align: center;
   color: #ffffff;
   border: none;

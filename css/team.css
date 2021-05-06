@@ -10,12 +10,12 @@
   background-color: #fff;
 }
 .content-team {
-    border: none;
-    margin: 0;
-    width: 100%;
-background-color: #fff;
-border-radius: 0;
-text-align: start;
+  border: none;
+  margin: 0;
+  width: 100%;
+  background-color: #F1F0F0;
+  border-radius: 0;
+  text-align: start;
 }
 .team-window {
   display: grid;
@@ -47,8 +47,8 @@ text-align: start;
   gap: 0.2rem;
 }
 .persona-img > img {
-    align-self: center;
-    object-fit: cover;
+  align-self: center;
+  object-fit: cover;
 }
 .persona-text h1 {
   font-size: 1rem;
@@ -63,36 +63,45 @@ text-align: start;
 }
 
 .partners-block {
-grid-template-columns: repeat(3, 1fr);
-}    
+  grid-template-columns: repeat(3, 1fr);
+}
 .partners-img {
   justify-self: center;
   align-self: center;
-width: 60%;
+  width: 60%;
 }
+.partners-img img {
+  -webkit-box-shadow: -18px 17px 17px 12px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: -18px 17px 17px 12px rgba(34, 60, 80, 0.2);
+  box-shadow: -18px 17px 17px 12px rgba(34, 60, 80, 0.2);
+}
+.partners-img p {
+  font-style: normal;
+}
+
 @media (max-width: 1024px) {
-    .team {
-      grid-template-areas:
+  .team {
+    grid-template-areas:
       "wel nav"
       "title title"
       "info info"
       "best go";
-}
+  }
 }
 
 @media (max-width: 890px) {
   .team {
-  grid-template-areas:
-    "wel go"
-    "title title"
-    "info info"
-    "best nav";
+    grid-template-areas:
+      "wel go"
+      "title title"
+      "info info"
+      "best nav";
   }
 }
 @media (max-width: 540px) {
-    .team {
-      grid-template-areas:
-      "wel wel"      
+  .team {
+    grid-template-areas:
+      "wel wel"
       "title title"
       "info info"
       "go nav"
@@ -102,9 +111,9 @@ width: 60%;
 @media (max-width: 520px) {
   .team {
     grid-template-areas:
-      "wel "      
+      "wel "
       "title"
-      "info "      
+      "info "
       "go"
       "nav "
       "best ";
@@ -112,8 +121,8 @@ width: 60%;
   .partners-block {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
-    }    
-    .partners-img {
+  }
+  .partners-img {
     width: 30%;
-    }
+  }
 }
