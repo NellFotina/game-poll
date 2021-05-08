@@ -86,7 +86,6 @@ embed {
   justify-content: center;
   margin-bottom: 3rem;
   justify-self: center;
-  max-height: 100%;
   max-width: 100%;
   aspect-ratio: 1 / 1;
 }
@@ -501,10 +500,7 @@ button.close {
   .wrapper-dropdown-2.active .btn-main-border::before {
     top: -4px;
   }
-  .control-panel {
-    margin-bottom: 0;
-  }
-
+  
   .welcome-main {
     width: 15rem;
     border-radius: 3.2vh;

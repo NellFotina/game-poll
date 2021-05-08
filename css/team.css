@@ -19,7 +19,7 @@
 }
 .team-window {
   display: grid;
-  padding: 0;
+  padding: 0.3rem 0;
   margin: 0;
   height: 100%;
 }
@@ -74,10 +74,10 @@
  .partners-img:last-child { 
 align-self: flex-end;
  }
-.partners-img img {
-  -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
--moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+ .partners-img img {
+  -webkit-box-shadow: 2px 2px 7px 2px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 2px 2px 7px 2px rgba(34, 60, 80, 0.2);
+  box-shadow: 2px 2px 7px 2px rgba(34, 60, 80, 0.2);
 }
 .partners-img p {
   font-style: normal;

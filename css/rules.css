@@ -25,8 +25,7 @@ grid-template-areas:
   width: 95%;
   position: absolute;
   overflow: auto;
-  padding: 1rem 1.5rem 2rem 1rem;
-  margin-top: 1rem;
+  padding: 2rem 1.5rem 2rem 1rem;
   font: italic 500 0.9rem Roboto;
   z-index: 1;
 }
@@ -163,7 +162,7 @@ grid-template-areas:
       justify-self: stretch;
     }
   .scroll {
-    padding: 0 1.5rem 0 1rem;
+    padding: 1rem 1.5rem 1rem 1rem;
   }
 }
 
