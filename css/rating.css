@@ -6,12 +6,14 @@
 }
 
 .rating-scroll {
-  height: 75%;
+  height: 70%;
   width: 95%;
   position: absolute;
   overflow: auto;
   padding: 0.5rem 1.5rem 0 3rem;
   font: italic 500 0.9rem Roboto;
+  align-self: flex-end;
+  bottom: 5%;
   z-index: 1;
 }
 
@@ -28,10 +30,14 @@
   font-size: 1rem;
   margin-top: 0.5rem;
   margin-bottom: 0;
-  display: flex;
-  align-self: flex-start;
+  align-self: center;
 }
-
+.content-rules-description p {
+  font-size: 0.55rem;
+  font-style: italic;
+  padding: 0 0.3rem;
+  color: #f50516;
+}
 .rating-window-list {
   margin: 0;
   padding: 0;
@@ -73,7 +79,7 @@
     width: 50%;
   }
   .rating-scroll {
-    padding: 0.5rem 0.5rem 0 1.5rem;
+    padding: 0 0.5rem 0 2rem;
   }
 
   .rating-window-list {

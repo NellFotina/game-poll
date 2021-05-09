@@ -52,21 +52,80 @@
             <div class="three-buttons navi-list">
               <div id="list" class="item-block1">
                 <div class="list-block">
-                  <div class="listup" >
+                  <form class="listup">
                     <button id="btnList" class="list-item1" onclick="listshow();">
                       Оберіть варіанти
                     </button>
-                      <select name="select" id="dropup" class="dropup-list hover" size="6" multiple>
-                        <option value="s1">Україна</option>
-                        <option value="s2">Росія</option>
-                        <option value="s3">Греція</option>
-                        <option value="s4">Франція</option>
-                        <option value="s5">Чехія</option>
-                        <option value="s6">Японія</option>
-                      </select>
-                      <div class="arrow" onclick="listshow();">
+                    <div id="dropup" class="selectDivCommon hover">
+                      <div class="selectDiv">
+                        <label for="s1" class="selectLabel">Україна</label>
+                        <input
+                          id="s1"
+                          type="checkbox"
+                          value="1"
+                          name="selectAnsw"
+                          class="selectInput"
+                        />
+                        
+                      </div>
+                      <div class="selectDiv">
+                        <label for="s2" class="selectLabel">Росія</label>
+                        <input
+                          id="s2"
+                          type="checkbox"
+                          value="2"
+                          name="selectAnsw"
+                          class="selectInput"
+                        />
+                        
+                      </div>
+                      <div class="selectDiv">
+                        <label for="s3" class="selectLabel">Греція</label>
+                        <input
+                          id="s3"
+                          type="checkbox"
+                          value="3"
+                          name="selectAnsw"
+                          class="selectInput"
+                        />
+                        
+                      </div>
+                      <div class="selectDiv">
+                        <label for="s4" class="selectLabel">Франція</label>
+                        <input
+                          id="s4"
+                          type="checkbox"
+                          value="4"
+                          name="selectAnsw"
+                          class="selectInput"
+                        />
+                        
+                      </div>
+                      <div class="selectDiv">
+                        <label for="s5" class="selectLabel">Чехія</label>
+                        <input
+                          id="s5"
+                          type="checkbox"
+                          value="5"
+                          name="selectAnsw"
+                          class="selectInput"
+                        />
+                        
+                      </div>
+                      <div class="selectDiv">
+                        <label for="s6" class="selectLabel">Японія</label>
+                        <input
+                          id="s6"
+                          type="checkbox"
+                          value="6"
+                          name="selectAnsw"
+                          class="selectInput"
+                        />
+                        
                       </div>
                     </div>
+                    <div class="arrow" onclick="listshow();"></div>
+                  </form>
                 </div>
                 
                 <button class="i2 item2">Дати відповідь</button>

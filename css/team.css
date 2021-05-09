@@ -130,7 +130,15 @@ align-self: flex-end;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 0.5fr 0.7fr;
   }
+  .partners-img a{
+    display: grid;
+    justify-items: center;
+    width: 100%;
+  }
   .partners-img {
+    width: 100%;
+}
+  .partners-img img:first-child {
     width: 30%;
   }
   .partners-img:first-child,

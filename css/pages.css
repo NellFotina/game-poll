@@ -164,6 +164,7 @@
 
 .navi-buttons button,
 .three-buttons button,
+.three-buttons label,
 .navi-buttons form input,
 .three-buttons form input {
   width: 100%;
@@ -179,6 +180,7 @@
 
 .navi-buttons button:hover,
 .three-buttons button:hover,
+.three-buttons label:hover,
 .navi-buttons form input:hover,
 .three-buttons form input:hover {
   border-color: #7f8c8d;
@@ -189,6 +191,7 @@
 .btn-quit:focus,
 .navi-buttons button:focus,
 .three-buttons button:focus,
+.three-buttons label:focus,
 .navi-buttons form input:focus,
 .three-buttons form input:focus {
   outline: none;

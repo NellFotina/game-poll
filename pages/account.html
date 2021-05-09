@@ -13,8 +13,6 @@
     />
     <!-- CSS style-->
     <link href="../css/style.css" rel="stylesheet" type="text/css" />
-    <link href="../css/result.css" rel="stylesheet" type="text/css" />
-
     <link href="../css/forms.css" rel="stylesheet" type="text/css" />
     <link href="../css/rules.css" rel="stylesheet" type="text/css" />
     <link href="../css/rating.css" rel="stylesheet" type="text/css" />
@@ -66,7 +64,7 @@
           <div class="rating-window rating-account">
             <div class="content-rules-description content-account">
               <h4 class="rating-window-title">Рейтинг гравців</h4>
-
+              <p>Для відображення ваших результатів у рейтингу, заповніть профіль</p>
               <div class="rating-scroll">
                 <ol class="rating-window-list">
                   <li>............</li>
@@ -139,16 +137,6 @@
                   />
                 </div>
                 <div class="form-account-item">
-                  <label for="recipient-email" class="form-account-label"
-                    >e-mail:</label
-                  >
-                  <input
-                    type="email"
-                    class="form-account-control"
-                    id="recipient-email"
-                  />
-                </div>
-                <div class="form-account-item">
                   <label for="recipient-phone" class="form-account-label"
                     >Телефон:</label
                   >
@@ -158,7 +146,16 @@
                     id="recipient-phone"
                   />
                 </div>
-
+                <div id="pd" class="form-account-item">
+                  <label for="recipient-email" class="form-account-label"
+                    >Я погоджуюсь на обробку персональних даних</label
+                  >
+                  <input
+                    type="checkbox"
+                    class="form-account-control"
+                    id="recipient-pd"
+                  />
+                </div>
                 <button type="button" class="btn-form-ac">
                   Застосувати зміни
                 </button>

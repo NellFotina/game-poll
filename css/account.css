@@ -74,6 +74,15 @@ align-content: space-evenly;
   border-radius: 3vh;
   text-align: center;
 }
+#pd {
+  grid-template-columns: 0.9fr 0.1fr;
+  align-items: center;
+}
+#recipient-pd {
+  width: 80%;
+  height: 80%;
+  justify-self: flex-end;
+}
 @media (max-width: 1366px) {
 .account {
   grid-template-areas:
