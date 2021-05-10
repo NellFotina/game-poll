@@ -63,6 +63,7 @@ grid-template-areas:
   display: grid;
   overflow: hidden;
   padding: 0;
+  padding: 1rem 0.4rem 1rem 1rem;
 }
 .scores-result {
   font: italic 500 1rem Roboto;
@@ -164,6 +165,9 @@ grid-template-areas:
     }
   .scroll {
     padding: 1rem 1.5rem 1rem 1rem;
+  }
+  .scroll-result {
+    padding: 1rem 0.4rem 1rem 1rem;
   }
 }
 

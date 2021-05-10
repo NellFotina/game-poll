@@ -83,6 +83,7 @@ align-content: space-evenly;
   height: 80%;
   justify-self: flex-end;
 }
+
 @media (max-width: 1366px) {
 .account {
   grid-template-areas:

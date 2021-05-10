@@ -13,7 +13,7 @@
   display: block;
   margin: 0 auto;
   cursor: pointer;
- }
+}
 .navi-list .list-item1 {
   border-radius: 3vh 0 0 3vh;
 }
@@ -28,12 +28,12 @@
   outline: none;
 }
 .listup {
-  position: relative;
   display: grid;
   grid-template-columns: 92% 1.4em;
   list-style: none;
+  position: relative;
 }
-.dropup-list {
+/* .dropup-list {
   display: none;
   position: absolute;
   border: 0.76vh solid #939292;
@@ -44,48 +44,58 @@
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   bottom: 1rem;
-}
+} */
 .three-buttons form input.selectInput,
 .three-buttons form label.selectLabel {
-border: 0;
-height: 1rem;
-background: #fff;
-text-align: left;
+  border: 0;
+  background: #fff;
+  text-align: left;
+}
+.three-buttons form input.selectInput {
+  height: 1rem;
+  align-self: center;
+}
+.three-buttons form label.selectLabel {
+  height: auto;
 }
 #btnList {
-    z-index: 3;
+  z-index: 3;
 }
 
 .selectDiv {
-display: grid;
-grid-template-columns: 0.9fr 0.1fr;
-padding: 0 0.5rem;
-font: normal 500 0.75rem/1rem Roboto;
-word-wrap: break-word;
-}
-
-.listup {
-    position: relative;
-}
-
-.selectDivCommon {
-  display: none;
-    gap: 0.3rem;
-    position: absolute;
-    padding: 1rem 0 3rem;
-    border: 0.76vh solid #939292;
-    border-radius: 3vh;
-    background-color: #fff;
-    width: 100%;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0 0 0 0.2);
-    z-index: 1;
-    bottom: 1rem;
-}
-.showList {
   display: grid;
+  grid-template-columns: 0.9fr 0.1fr;
+  padding: 0 0 0 0.5rem;
+  font: normal 500 0.75rem/1rem Roboto;
+  word-wrap: break-word;
 }
 
+.scrollSelect {
+  display: none;
+  position: absolute;
+  gap: 0.3rem;
+  padding: 1rem 0 3rem;
+  border: 0.76vh solid #939292;
+  border-radius: 3vh;
+  background-color: #fff;
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  bottom: 1rem;
+}
+.selectDivCommon {
+  display: grid;
+  gap: 0.3rem;
+  overflow: auto;
+  background-color: #fff;
+  max-height: 70vh;
+}
+
+.showList {
+  display: block;
+  max-height: 70vh;
+  overflow: hidden;
+}
 
 .disabled {
   pointer-events: none;
@@ -93,6 +103,7 @@ word-wrap: break-word;
 .listup:hover .hover {
   display: grid;
   gap: 0.3rem;
+  max-height: 70vh;
 }
 .selectDiv label.selectLabel:hover {
   background-color: #c4c4c4;
@@ -123,24 +134,22 @@ word-wrap: break-word;
 }
 
 @media (max-width: 992px) {
-#list {
+  #list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
-        "i2 i3"
-        "lb lb";
-}
-.list-block {
-  grid-area: lb;
-  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
-}
-.three-buttons .list-block {
-  margin: 0 auto;
-}
-
+      "i2 i3"
+      "lb lb";
+  }
+  .list-block {
+    grid-area: lb;
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+  }
+  .three-buttons .list-block {
+    margin: 0 auto;
+  }
 }
 @media (max-width: 576px) {
-
   .list-block {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   }
@@ -153,7 +162,7 @@ word-wrap: break-word;
   }
   .list-block {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
+  }
 }
 
 @media (max-width: 320px) {
@@ -163,5 +172,5 @@ word-wrap: break-word;
   }
   .list-block {
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-}
+  }
 }

@@ -32,7 +32,7 @@
   margin-bottom: 0;
   align-self: center;
 }
-.content-rules-description p {
+p.advice {
   font-size: 0.55rem;
   font-style: italic;
   padding: 0 0.3rem;
@@ -60,6 +60,7 @@
 .btn-bottom-res {
   font: normal 400 0.7rem/1rem Roboto;
   min-width: 15vw;
+  white-space: normal;
 }
 
 

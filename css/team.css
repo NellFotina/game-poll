@@ -27,7 +27,6 @@
 .persona {
   display: grid;
   grid-template-columns: 17% 83%;
-  /* padding: 2%; */
 }
 .team-block {
   display: grid;
@@ -55,6 +54,9 @@
 }
 .persona-text p {
   font-size: 0.5rem;
+}
+p.email {
+  color:#2388e5; 
 }
 .persona-text h1,
 .persona-text p {
