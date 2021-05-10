@@ -58,7 +58,7 @@ text-align: left;
 
 .selectDiv {
 display: grid;
-grid-template-columns: 0.8fr 0.2fr;
+grid-template-columns: 0.9fr 0.1fr;
 padding: 0 0.5rem;
 font: normal 500 0.75rem/1rem Roboto;
 word-wrap: break-word;
@@ -78,7 +78,7 @@ word-wrap: break-word;
     background-color: #fff;
     width: 100%;
     overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+    box-shadow: 0px 8px 16px 0px rgba(0 0 0 0.2);
     z-index: 1;
     bottom: 1rem;
 }
@@ -91,10 +91,12 @@ word-wrap: break-word;
   pointer-events: none;
 }
 .listup:hover .hover {
-  display: block;
+  display: grid;
+  gap: 0.3rem;
 }
-.dropup-list option:hover {
+.selectDiv label.selectLabel:hover {
   background-color: #c4c4c4;
+  border-radius: 0;
 }
 .arrow {
   position: relative;
