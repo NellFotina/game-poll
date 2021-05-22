@@ -2,7 +2,9 @@
   justify-content: space-around;
   align-content: space-around;
   display: grid;
+  display: -ms-grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  -ms-grid-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
 .navi-list .arrow {
@@ -29,22 +31,12 @@
 }
 .listup {
   display: grid;
+  display: -ms-grid;
   grid-template-columns: 92% 1.4em;
+  -ms-grid-columns: 92% 1.4em;
   list-style: none;
   position: relative;
 }
-/* .dropup-list {
-  display: none;
-  position: absolute;
-  border: 0.76vh solid #939292;
-  border-radius: 3vh;
-  background-color: #fff;
-  width: 100%;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  bottom: 1rem;
-} */
 .three-buttons form input.selectInput,
 .three-buttons form label.selectLabel {
   border: 0;
@@ -64,7 +56,9 @@
 
 .selectDiv {
   display: grid;
+  display: -ms-grid;
   grid-template-columns: 0.9fr 0.1fr;
+  -ms-grid-columns: 0.9fr 0.1fr;
   padding: 0 0 0 0.5rem;
   font: normal 500 0.75rem/1rem Roboto;
   word-wrap: break-word;
@@ -85,10 +79,11 @@
 }
 .selectDivCommon {
   display: grid;
+  display: -ms-grid;
   gap: 0.3rem;
   overflow: auto;
   background-color: #fff;
-  max-height: 70vh;
+  max-height: 55vh;
 }
 
 .showList {
@@ -102,8 +97,10 @@
 }
 .listup:hover .hover {
   display: grid;
+  display: -ms-grid;
   gap: 0.3rem;
   max-height: 70vh;
+  bottom: 1rem;
 }
 .selectDiv label.selectLabel:hover {
   background-color: #c4c4c4;
@@ -136,14 +133,18 @@
 @media (max-width: 992px) {
   #list {
     display: grid;
+    display: -ms-grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "i2 i3"
       "lb lb";
+    -ms-grid-columns: 1fr 1fr;
   }
   .list-block {
     grid-area: lb;
     grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    -ms-grid-area: lb;
+    -ms-grid-columns: repeat(auto-fit, minmax(370px, 1fr));
   }
   .three-buttons .list-block {
     margin: 0 auto;
@@ -152,25 +153,32 @@
 @media (max-width: 576px) {
   .list-block {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    -ms-grid-columns: repeat(auto-fit, minmax(240px, 1fr));
   }
 }
 
 @media (max-width: 414px) {
   .navi-list {
     display: grid;
+    display: -ms-grid;
     grid-template-columns: minmax(200px, 1fr);
+    -ms-grid-columns: minmax(200px, 1fr);
   }
   .list-block {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    -ms-grid-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
 
 @media (max-width: 320px) {
   .navi-list {
     display: grid;
+    display: -ms-grid;
     grid-template-columns: minmax(180px, 1fr);
+    -ms-grid-columns: minmax(180px, 1fr);
   }
   .list-block {
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    -ms-grid-columns: repeat(auto-fit, minmax(180px, 1fr));
   }
 }
