@@ -6,6 +6,8 @@
     <title>Game Poll</title>
     <link href="../css/style.css" rel="stylesheet" type="text/css" />
     <link href="../css/pages.css" rel="stylesheet" type="text/css" />
+    <link href="../css/range.css" rel="stylesheet" type="text/css" />
+    <link href="../css/list.css" rel="stylesheet" type="text/css" />
     <link href="../css/modal.css" rel="stylesheet" type="text/css" />
     <script
       src="https://kit.fontawesome.com/09332f583c.js"
@@ -37,12 +39,14 @@
             <div class="tablo">
               <div class="tablo1">
                 <span
-                  ><i class="fas fa-question-circle"></i
-                  >&nbsp;15&nbsp;/&nbsp;100&nbsp;<i class="fas fa-star"></i
-                ></span>
+                  ><i class="fas fa-question-circle"><span class="info-que"><img src="../img/Info.png" alt="Информация" height="48" width="48" />Поточне&nbsp;питання</span></i
+                  ><span id="questionsProgress" 
+                    ><span>&nbsp;1&nbsp;</span>/<span>&nbsp;20&nbsp;</span></span
+                  ><i class="fas fa-star"><span class="info-que"><img src="../img/Info.png" alt="Информация" height="48" width="48" />Загальна кількість&nbsp;балів</span></span></i
+                >
               </div>
               <div class="tablo2">
-                  <input type="text" value="90" id="timer">
+                <input type="text" value="90" id="timer" />
               </div>
             </div>
             <div class="btn-control">
@@ -52,38 +56,26 @@
           </div>
 
           <div class="questions-block">
-            <div class="questions_page1 questions">
+            <div class="questions_page3 questions" id="questionBlock">
               <img src="../img/questions/GOALS_Ukr1.png" class="goals" alt="" />
-              <p class="questions-text">Що таке евтрофікація?</p>
+              <p class="questions-text" id="question"></p>
             </div>
           </div>
 
           <div class="navi-row">
-            <div class="navi-buttons">
-              <div class="item-block1">
-                <button class="item1">
-                  А. Забруднення вод океану діоксидами вуглецю
-                </button>
-                <button class="item2">
-                  Б. Надмірна концентрація біогенних елементів у водах океану
-                </button>
-              </div>
-              <div class="item-block2">
-                <button class="item3">
-                  В. Відсутність біорізноманіття у водах океану
-                </button>
-                <button class="item4"></button>
-              </div>
-            </div>
+            <div class="navi-buttons" id="answersBlock"></div>
           </div>
         </div>
       </div>
     </div>
 
     <div class="pauseModal" id="pauseModal" onclick="start();">
-      
       <div class="control-panel pause-control-panel">
-        <div class="control-panel-buttons pause-control-panel-buttons" id="buttons-animate" onclick="start();">
+        <div
+          class="control-panel-buttons pause-control-panel-buttons"
+          id="buttons-animate"
+          onclick="start();"
+        >
           <img src="../img/buttons.png" alt="" onclick="start();" />
         </div>
         <div class="control-panel-earth" onclick="start();">
@@ -93,5 +85,6 @@
     </div>
 
     <script src="../js/timer.js"></script>
+    <script type="module" src="../js/questions.js"></script>
   </body>
 </html>
