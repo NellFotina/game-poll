@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Game Poll</title>
+    <title>SDG Game</title>
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
@@ -11,6 +11,8 @@
       integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
       crossorigin="anonymous"
     />
+    <!-- favicon for Apple -->
+    <link rel="apple-touch-icon" href="https://game-globalcompact.org.ua/favicon-32x32.png" />
     <!-- CSS style-->
     <link href="../css/style.css" rel="stylesheet" type="text/css" />
     <link href="../css/forms.css" rel="stylesheet" type="text/css" />
@@ -38,8 +40,8 @@
 
       <div class="rules team">
         <div class="welcome-main">
-          <span class="welcome-rules infospan top"
-            >Вітаємо,&nbsp;Fighter@gmail.com</span
+          <span class="welcome-rules infospan top browser" id="userInfo"
+            >Рекомендовані браузери: Chrome або Firefox</span
           >
         </div>
         <div class="field-block title">
@@ -51,17 +53,18 @@
           <button class="btn-main-dropdown btn-main-border up-menu">
             <span>Меню</span>
           </button>
-          <ul class="dropdown">
+          <ul class="dropdown" id="dropdown">
             <li><a href="rules.html">Навіщо грати</a></li>
-            <li><a href="account.html">Профіль</a></li>
             <li><a href="rating.html">Рейтинг</a></li>
             <li><a href="partners.html">Партнери гри</a></li>
+            <li><a href="links.html">Корисні посилання</a></li>
             <li>
               <a href="https://globalcompact.org.ua/contacts/" target="_blank"
                 >Контакти</a
               >
             </li>
             <li><a href="team.html">Наша команда</a></li>
+            <li id="profile"><a href="account.html">Профіль</a></li>
           </ul>
         </div>
         <!-- end Navbar -->
@@ -71,9 +74,9 @@
             <div class="scroll team-window">
               <div class="team-block bestapp-block">
                 <div class="bestwomen">
-                <div class="persona persona-bestapp pb1">
-                  <div class="persona-img">
-                    <img src="../img/bestapp/cherkes_nataliya.jpg" alt="" />
+                  <div class="persona persona-bestapp pb1">
+                    <div class="persona-img">
+                      <img src="../img/bestapp/cherkes_nataliya.jpg" alt="" />
                     </div>
                     <div class="persona-text">
                       <h1>Наталія Черкес</h1>
@@ -81,54 +84,50 @@
                       <p class="email">cherkesnataly@gmail.com</p>
                     </div>
                   </div>
-                <div class="persona persona-bestapp pb2">
-                  <div class="persona-img">
-                    <img src="../img/bestapp/fotina_nelya.jpg" alt="" />
-                  </div>
-                  <div class="persona-text">
-                    <h1>Неля Фотіна</h1>
-                    <p>Front-end developer</p>
-                    <p class="email">fotina.nel@gmail.com</p>
+                  <div class="persona persona-bestapp pb2">
+                    <div class="persona-img">
+                      <img src="../img/bestapp/fotina_nelya.jpg" alt="" />
+                    </div>
+                    <div class="persona-text">
+                      <h1>Неля Фотіна</h1>
+                      <p>Front-end developer</p>
+                      <p class="email">fotina.nel@gmail.com</p>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="bestmen">
-                <div class="persona persona-bestapp pb3">
-                  <div class="persona-img">
-                    <img src="../img/bestapp/skripnikov_oleg.jpg" alt="" />
+                <div class="bestmen">
+                  <div class="persona persona-bestapp pb3">
+                    <div class="persona-img">
+                      <img src="../img/bestapp/skripnikov_oleg.jpg" alt="" />
+                    </div>
+                    <div class="persona-text">
+                      <h1>Олег Скрипников</h1>
+                      <p>Front-end developer</p>
+                      <p class="email">oskripnikov@gmail.com</p>
+                    </div>
                   </div>
-                  <div class="persona-text">
-                    <h1>Олег Скрипников</h1>
-                    <p>
-                      Front-end developer
-                    </p>
-                    <p class="email">oskripnikov@gmail.com</p>
+                  <div class="persona persona-bestapp pb4">
+                    <div class="persona-img">
+                      <img src="../img/bestapp/yurii_starostin.jpg" alt="" />
+                    </div>
+                    <div class="persona-text">
+                      <h1>Юрій Старостін</h1>
+                      <p>Back-end developer</p>
+                      <p class="email">yurik_05@inbox.ru</p>
+                    </div>
+                  </div>
+                  <div class="persona persona-bestapp pb5">
+                    <div class="persona-img">
+                      <img src="../img/bestapp/dzmitry_nz.png" alt="" />
+                    </div>
+                    <div class="persona-text">
+                      <h1>Дмитро Наєзжий</h1>
+                      <p>Full-stack developer</p>
+                      <p class="email">d.nayezzhy@gmail.com</p>
+                    </div>
                   </div>
                 </div>
-                <div class="persona persona-bestapp pb4">
-                  <div class="persona-img">
-                    <img src="../img/bestapp/yurii_starostin.jpg" alt="" />
-                  </div>
-                  <div class="persona-text">
-                    <h1>Юрій Старостін</h1>
-                    <p>Back-end developer</p>
-                    <p class="email">yurik_05@inbox.ru</p>
-                  </div>
-                </div>
-                <div class="persona persona-bestapp pb5">
-                  <div class="persona-img">
-                    <img src="../img/bestapp/dzmitry_nz.png" alt="" />
-                  </div>
-                  <div class="persona-text">
-                    <h1>Дмитро Наєзжий</h1>
-                    <p>Full-stack developer</p>
-                    <p class="email">d.nayezzhy@gmail.com</p>
-                  </div>
-                </div>
-              </div>
-
-        
               </div>
             </div>
           </div>
@@ -149,7 +148,21 @@
     </div>
     <!-- end main -->
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="../js/dropdown.js"></script>
+    <script>
+      const userData = JSON.parse(localStorage.getItem("userData"));
+      const startButton = document.getElementById("go");
+      const userInfo = document.getElementById("userInfo");
+      const profile = document.getElementById("profile");
+      const dropdown = document.getElementById("dropdown");
+      if (!userData) profile.classList.add("hidden");
+        else profile.classList.remove("hidden");
+      startButton.addEventListener("click", () => {
+        if (userData) location.href = "./question.html";
+        else location.href = "/";
+      });
+      userInfo.innerHTML = userData ? `Вітаємо, <a href='/pages/account.html'>${userData.nickname}</a>` : "Вітаємо";
+    </script>
   </body>
 </html>
