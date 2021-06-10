@@ -1,7 +1,7 @@
 import { apiGet } from "./getData.js";
 import create from "./create.js";
 // import { URL, questionMax, wrongColor, trueColor } from "./constants.js";
-import { URL, questionMax, wrongColor, trueColor, wonPhrases } from "./constants.js";
+import { URL, questionMax, wrongColor, trueColor } from "./constants.js";
 import { verifyAuth } from "./users.js";
 import setData from "./setData.js";
 import { start, stop } from "./timer.js";
@@ -12,7 +12,6 @@ const questionsQuantity = document.getElementById("questionsQuantity"),
   questionBlock = document.getElementById("questionBlock"),
   answersBlock = document.getElementById("answersBlock"),
   headerBlock = document.querySelector(".header-wrapper"),
-  userInfo = document.getElementById("userInfo"),
   quitBtn = document.getElementById("quit"),
   questionText = document.getElementById("question"),
   modalClose = document.getElementById("modalClose"),
@@ -39,6 +38,8 @@ let questionNum = 1,
 // Переход на главную при переключении вкладок браузера
 // document.addEventListener("visibilitychange", () => { if(document.hidden) location.href = "/" });
 
+let userData = JSON.parse(localStorage.getItem("userData"));
+
 async function handler() {
   apiGet(fullUrl).then((responseData) => {
     const questions = responseData;
@@ -63,7 +64,7 @@ quitBtn.addEventListener("click", quit);
 const seeResult = () => {
   const token = localStorage.getItem("token");
   const userId = localStorage.getItem("userId");
-  const userData = JSON.parse(localStorage.getItem("userData"));
+  userData = JSON.parse(localStorage.getItem("userData"));
   if(token && userId && userData) {
     const fullUrl = URL + "users/" + userId;
     setData(fullUrl, token, {score: scores}).then((res) => {
@@ -101,21 +102,18 @@ const showModalEmptyAnswer = (showText) => {
   setTimeout(() => $("#modalRange").modal("hide"), 2000);
 };
 
-
-
-// $('#modalRange').on('hidden.bs.modal', () => nextQuestion());
-
 const answerIsTrue = () => {
   stop();
   qtyCorrect++;
-  if(qtyCorrect % 4 === 0) {
-    const qty = Math.floor(Math.random() * wonPhrases.length);
-    showModalEmptyAnswer(wonPhrases[qty], 2500);
-    if(qtyCorrect === 20) qtyCorrect = 0;
-  };
+  // if(qtyCorrect % 4 === 0) {
+    // const qty = Math.floor(Math.random() * wonPhrases.length);
+    // showModalEmptyAnswer(wonPhrases[qty], 2500);
+    // if(qtyCorrect === 20) qtyCorrect = 0;
+  // };
   scores = scores + 5;
   qtyWrong = 0;
-  setTimeout(() => nextQuestion(), 2500);
+  if(!question.tip) setTimeout(() => nextQuestion(), 2500);
+    else showModal(question.tip);
 };
 
 export const answerIsWrong = (target) => {
@@ -155,10 +153,8 @@ const questionsScoreUpdate = () => {
 };
 
 const setUserInfo = () => {
-  const userData = JSON.parse(localStorage.getItem("userData"));
   if (userData) verifyAuth();
     else location.href = "/";
-  if (userData) userInfo.innerText = "Вітаємо, " + userData.nickname;
 };
 
 const setQuestion = (questions) => {

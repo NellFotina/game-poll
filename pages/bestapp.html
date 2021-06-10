@@ -12,7 +12,10 @@
       crossorigin="anonymous"
     />
     <!-- favicon for Apple -->
-    <link rel="apple-touch-icon" href="https://game-globalcompact.org.ua/favicon-32x32.png" />
+    <link
+      rel="apple-touch-icon"
+      href="https://game-globalcompact.org.ua/favicon-32x32.png"
+    />
     <!-- CSS style-->
     <link href="../css/style.css" rel="stylesheet" type="text/css" />
     <link href="../css/forms.css" rel="stylesheet" type="text/css" />
@@ -20,7 +23,21 @@
     <link href="../css/team.css" rel="stylesheet" type="text/css" />
     <link href="../css/bestapp.css" rel="stylesheet" type="text/css" />
   </head>
-
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '798886734353905');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=798886734353905&ev=PageView&noscript=1"
+  /></noscript>
   <body>
     <div class="main overflow-hidden">
       <div class="header-logo-mt header-logo-wrapper">
@@ -64,6 +81,9 @@
               >
             </li>
             <li><a href="team.html">Наша команда</a></li>
+            <li>
+              <a href="#">Технічна підтримка</a>
+            </li>
             <li id="profile"><a href="account.html">Профіль</a></li>
           </ul>
         </div>
@@ -157,12 +177,14 @@
       const profile = document.getElementById("profile");
       const dropdown = document.getElementById("dropdown");
       if (!userData) profile.classList.add("hidden");
-        else profile.classList.remove("hidden");
+      else profile.classList.remove("hidden");
       startButton.addEventListener("click", () => {
         if (userData) location.href = "./question.html";
         else location.href = "/";
       });
-      userInfo.innerHTML = userData ? `Вітаємо, <a href='/pages/account.html'>${userData.nickname}</a>` : "Вітаємо";
+      userInfo.innerHTML = userData
+        ? `Вітаємо, <a href='/pages/account.html'>${userData.nickname}</a>`
+        : "Вітаємо";
     </script>
   </body>
 </html>
